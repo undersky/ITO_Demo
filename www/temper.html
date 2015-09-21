@@ -7,19 +7,19 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="image/favicon.ico">
+    <link rel="icon" href="/image/favicon.ico">
 
     <title>智能生活</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="/css/dashboard.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
+    <script src="/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -50,9 +50,9 @@
         <div class="col-sm-3 col-md-2 sidebar">
           
             <ul class="nav nav-sidebar">
-            <li><a href="main.html">灯光控制</a></li>
-            <li><a href="temper.html">温湿度</a></li>
-            <li><a href="record.html">报警记录</a></li>
+            <li><a href="/main.html">灯光控制</a></li>
+            <li><a href="/cgi-bin/temper.cgi">温湿度</a></li>
+            <li><a href="/record.html">报警记录</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -63,13 +63,17 @@
            <div class="form-group">
                     <label class="col-sm-2 control-label" for="ds_id">温度检测</label>
                     <div class="col-sm-4">
-                        <p><font color="red"><h5 align=center> 温    度 $CurTemp[DISCUZ_CODE_1046]lt;</h5><b>
+                        <p><font color="red"><h5 align=center> 温    度:
+                                $CurTemp$
+                            </h5><b>
                     </div>
            </div>
            <div class="form-group">
                     <label class="col-sm-2 control-label" for="ds_id">湿度检测</label>
                     <div class="col-sm-4">
-                        <p><font color="red"><h5 align=center> 湿    度 $CurHumidity[DISCUZ_CODE_1046]lt;</h5><b>
+                        <p><font color="red"><h5 align=center> 湿    度 :
+                                $CurHumidity$
+                            </h5><b>
                      </div>
            </div>
                         
@@ -82,11 +86,11 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="js/holder.min.js"></script>
+    <script src="/js/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
