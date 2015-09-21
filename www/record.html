@@ -56,88 +56,15 @@
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">灯光控制</h1>
+          <h1 class="page-header">报警记录</h1>
 
-
-          <h2 class="sub-header">LED1</h2>
-		  <form class="form-led1" name="form-led1" action="/cgi-bin/led.cgi" method="get" >
-		  
-		  <div class="radio">
-		  <label>
-		  <input type="radio" name="led1_radio" id="led1_radio1" value="led1_on" checked>
-		  开
-		  </label>
-		  </div>
-		  
-		  <div class="radio">
-		  <label>
-		  <input type="radio" name="led1_radio" id="led1_radio2" value="led1_off">
-		  关
-		  </label>
-		  </div>
-		  
-		  <button type="submit" class="btn btn-success btn-lg"> 提交</button>
-		  </form>
-		  
-		  <h2 class="sub-header">LED2</h2>
-		  <form class="form-led2" name="form-led2" action="/cgi-bin/led.cgi" method="get" >
-		  
-		  <div class="radio">
-		  <label>
-		  <input type="radio" name="led2_radio" id="led2_radio1" value="led2_on" checked>
-		  开
-		  </label>
-		  </div>
-		  
-		  <div class="radio">
-		  <label>
-		  <input type="radio" name="led2_radio" id="led2_radio2" value="led2_off">
-		  关
-		  </label>
-		  </div>
-		  
-		  <button type="submit" class="btn btn-success btn-lg"> 提交</button>
-		  </form>
-		  
-		  <h2 class="sub-header">LED3</h2>
-		  <form class="form-led3" name="form-led3" action="/cgi-bin/led.cgi" method="get" >
-		  
-		  <div class="radio">
-		  <label>
-		  <input type="radio" name="led3_radio" id="led3_radio1" value="led3_on" checked>
-		  开
-		  </label>
-		  </div>
-		  
-		  <div class="radio">
-		  <label>
-		  <input type="radio" name="led3_radio" id="led3_radio2" value="led3_off">
-		  关
-		  </label>
-		  </div>
-		  
-		  <button type="submit" class="btn btn-success btn-lg"> 提交</button>
-		  </form>
-		  
-		  <h2 class="sub-header">LED4</h2>
-          <form class="form-led4" name="form-led4" action="/cgi-bin/led.cgi" method="get" >
-		  
-		  <div class="radio">
-		  <label>
-		  <input type="radio" name="led4_radio" id="led4_radio1" value="led4_on" checked>
-		  开
-		  </label>
-		  </div>
-		  
-		  <div class="radio">
-		  <label>
-		  <input type="radio" name="led4_radio" id="led4_radio2" value="led4_off">
-		  关
-		  </label>
-		  </div>
-		  
-		  <button type="submit" class="btn btn-success btn-lg"> 提交</button>
-		  </form>
+		  <table class="table table-bordered table-hover">
+		  <tr>
+			<th>时间</th>
+			<th>报警类型</th>
+		  </tr>
+		  $Insert$
+		  </table>
         </div>
       </div>
     </div>
