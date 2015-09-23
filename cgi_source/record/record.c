@@ -45,10 +45,10 @@ int cgiMain()
     cgiHeaderContentType("text/html;charset=\"utf-8\"");
     while(fgets(buf,512,fp))
     {
-        if(strstr(buf,"Insert"))
+        if(strstr(buf,"$CurInsert$"))
         {
-            fprintf(cgiOut,"I found it");
-          //show_tables();
+            //fprintf(cgiOut,"I found it");
+            show_tables();
         }
         else
         {
@@ -71,7 +71,7 @@ void show_tables(void)
     char **dbresult;
     int nrow;
     int ncolumn;
-    int i,j;
+    int i;
 
     ret = sqlite3_open("../db/record.db",&db);
     if(ret != SQLITE_OK)
@@ -91,16 +91,21 @@ void show_tables(void)
 
     if(ncolumn !=0)
     {
-        for(i=0;i<nrow;i++)
+        for(i=1;i<=nrow;i++)
         {
             fprintf(cgiOut,"<tr>");
-            for(j=0;j<ncolumn;j++)
-            {
-                fprintf(cgiOut,"<th>");
 
-                fprintf(cgiOut,"%s",&dbresult[i][j]);
-                fprintf(cgiOut,"</th>");
-            }
+            fprintf(cgiOut,"<th>");
+            fprintf(cgiOut,dbresult[i*ncolumn]);
+            fprintf(cgiOut,"</th>");
+
+            fprintf(cgiOut,"<th>");
+            fprintf(cgiOut,dbresult[i*ncolumn+1]);
+            fprintf(cgiOut,"</th>");
+
+            fprintf(cgiOut,"<th>");
+            fprintf(cgiOut,dbresult[i*ncolumn+2]);
+            fprintf(cgiOut,"</th>");
             fprintf(cgiOut,"</tr>");
         }
     }
